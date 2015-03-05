@@ -1,0 +1,17 @@
+----------
+---------
+Necessity is the mother of invention
+
+My previous startup, WhatsOn, which connects media companies with social content, requires significant computational resources. Being a bootstrapping entrepreneur, and short on cash - my goal was to make do with whatever I could get for free, or for the lowest possible cost. My background in software architecture and 'can do' attitude has put me on a path towards an architecture that can do just that.
+
+But the more I researched into my problem, I realised it's not just mine. A lot of companies spend a lot of money on infrastructure - cloud or in-house, and they all over-spend. And the more I researched into the economics of mass / cloud / utility computing - the more I realized that over-spending is the norm, rather than the exception, and the degree of over-spending is significant.
+
+When this dime dropped, I wanted to kick myself. I should have realized this a year ago, since in 2004-2006 I was the Chief Architect of Mercury (now HP) Business Availability Center (BAC), and Mercury practically invented the term 'Business Technology Optimisation' (BTO). I have met numerous customers like Bank of America, Wells Fargo, Lockheed Martin - you name it - and I have seen with my own eyes how BTO delivers value to these customers. A lot has changed from 2004 to 2014 - but it seems that the problems just got bigger: moving to the cloud created a whole set of new optimisation challenges on a higher order of magnitude. By 2017, enterprise spending on cloud computing will amount to a projected $235.1B (IHS). How much of that could be saved, and put to better use?
+
+So the following question popped into my mind: the techniques I've used to save a few hundred Dollars per month, could they be generalized and applied to organizations that spend hundreds of thousands, and up to tens of millions of Dollars per month on 'Cloud' and in-house data centers?
+
+I've decided to dedicate my time to this question. Answering it requires a disciplined approach of experimentation and deduction, outlining the ultimate architecture of the solution to these problems. Every now and then I will publish a blog post which will document some of my questions, experiments and conclusions. These are all steps on a journey towards cloud optimisation, following the yellow brick road of multi-cloud, micro services, with a can-do and why-not attitude.
+
+You are welcome to join me on this journey.
+
+

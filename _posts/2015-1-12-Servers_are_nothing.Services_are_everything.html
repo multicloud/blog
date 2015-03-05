@@ -1,0 +1,235 @@
+---
+layout: post
+title: Servers are nothing. Services are everything
+---
+<html>
+  <body>
+    <h2>What's In a Name</h2>
+    <blockquote><strong>Juliet:</strong>
+      What's in a name? That which we call a rose.<br/>
+      By any other name would smell as sweet.</blockquote>
+    <p style="text-align: justify;">Some of us remember the days when it was
+      common for companies to have their own server farms. Servers were huddled
+      together in temples, called Server Rooms, where nothing was left to
+      chance: Everything was controlled: temperature, humidity, air filtering,
+      power supply, fire extinction... Only the priests (called System
+      Administrators), would normally be allowed to enter. Touching the holy of
+      holies - the actual computer - required a special Cleansing ritual,
+      getting rid of bad spirits (in the form of static electricity, cleansed by
+      Grounding).</p>
+    <p style="text-align: justify;">These awe inspiring heaps of vacuum tubes
+      and wires, were given most appropriate, awesome names: Colossus, ENIAC,
+      Whirlwind, UNIVAC, WITCH, Pegasus, Golem, Electron... Each computer was
+      one-of-a-kind, Like mythological gods.</p>
+    <p style="text-align: justify;">In time, as computers became more accessible
+      and popular, and as computer networking became more or less a standard,
+      uniquely naming servers became a must. After all, if two servers want to
+      'talk' with each other, they can't both be named ENIAC. Some cold
+      heart-ed bastards would still give their servers strictly functional names
+      - frontend-1-us-east-8, file-server, etc., the rest of us, those with some
+      sense of humor, would give their servers names like: Elvenpath, Yoda,
+      Constitution, Dogbert, and even Lucy.</p>
+    <p style="text-align: justify;"><img
+          class="alignright size-full"
+          src="{{baseurl}}images/lucy_the_computer.png"
+          alt="lucy_the_computer"
+          height="650"
+          width="740"></p>
+    <p style="text-align: justify;">Having applications online which were
+      dependant on single servers, hardware vendors were expected to reduce
+      hardware faults in any way possible, including crazy things like
+      oven-testing their hardware. But that wasn't enough. It became clear that
+      that preventing individual failure is not the right approach. The next
+      line of thought was - <em>Can we build something that would <strong>tolerate</strong>
+        failure</em>?</p>
+    <blockquote>Sh*t happens. And if you're lucky - it happens to you at least
+      once a day.</blockquote>
+    <p style="text-align: justify;">Light-bulb moment. Redundancy!! Two power
+      supplies! Two UPS systems! Two of everything!!</p>
+    <p style="text-align: justify;">Back in the 1960's, Greg Pfister invents the
+      concept of a Computer Cluster. Originally aimed at addressing cases where
+      a single computer could not handle the load, but later, throughout the
+      70's and 80's, adapted for high availability, with Digital (may it
+      rest in peace) VAX, the <a title="Tandem Computers" href="http://en.wikipedia.org/wiki/Tandem_Computers"><i>Tandem
+          Himalayan</i></a> (a circa 1994 high-availability product) and the <i>IBM
+        S/390 Parallel Sysplex.</i></p>
+    <p style="text-align: justify;">It's 1988, all of a sudden. Time flies when
+      you're reading someone Else's blog. Three guys (<a class="mw-redirect" title="David Patterson (scientist)"
+        href="http://en.wikipedia.org/wiki/David_Patterson_%28scientist%29">David
+        Patterson</a>, <a class="mw-redirect" title="Garth A. Gibson" href="http://en.wikipedia.org/wiki/Garth_A._Gibson">Garth
+        A. Gibson</a>, and <a title="Randy Katz" href="http://en.wikipedia.org/wiki/Randy_Katz">Randy
+        Katz</a>) present a paper at the SIGMOD conference, titled "<i>A Case
+        for Redundant Arrays of Inexpensive Disks (RAID)</i>": Let's put a lot
+      of cheap hard disks and turn it into a virtual one, that can tolerate N
+      failures. And RAID was born. Light and joy filled every living soul.
+      Except for Hardware vendors ("did that guy just say <em>inexpensive</em>?!")
+      which quickly rebounded - with 'RAID Edition' disks.</p>
+    <p style="text-align: justify;">10 years later... you guessed right, it's
+      1998. A group of very smart people, (<a title="Diane Greene" href="http://en.wikipedia.org/wiki/Diane_Greene">Diane
+        Greene</a>, <a title="Mendel Rosenblum" href="http://en.wikipedia.org/wiki/Mendel_Rosenblum">Mendel
+        Rosenblum</a>, Scott Devine, Edward Wang and <a title="Edouard Bugnion"
+        href="http://en.wikipedia.org/wiki/Edouard_Bugnion">Edouard
+        Bugnion</a>) realized that this is a never ending loop. Hardware is
+      hardware, and as anything physical - it's eventually going to break. And
+      fixing a broken server can take time. They start VMWare.</p>
+    <p style="text-align: justify;">Lucy is still a piece of (hopefully) cold
+      Silicone, surrounded by wires, plastic, gold, other metal, a pinch of
+      quartz... So Lucy can still fail. But with VMWare, if the vessel holding
+      Lucy's spirit breaks, Lucy's spirit can move to another vessel! A
+      stronger, better one. Good for you, Lucy!</p>
+    <h2 style="text-align: justify;">Let it fail!</h2>
+    <p style="text-align: justify;">So by now it's clear that anything can fail.
+      Software fails, hardware fails, heck - even Grand Temples of Cloud fail,
+      and more frequently than they would like you to know.</p>
+    <p style="text-align: justify;">Around <a href="http://en.wikipedia.org/wiki/Service-orientation">early
+        2000's</a>, software has started shifting from monolithic, single points
+      of failure <em>applications</em>, to the <strong>Micro-service</strong>
+      oriented, a-la the <strong><em>Let it Fail</em></strong> philosophy:
+      Build it so that when (<strong><span style="text-decoration: underline;">not
+          if</span></strong>) something fails, something else takes its place,
+      without disruption to the Service.</p>
+    <p style="text-align: justify;"><a href="http://en.wikipedia.org/wiki/Lean_manufacturing">Lean
+        Manufacturing</a>, spear-headed by Toyota with <em>TPS</em>, and later
+      adopted by the <em>Agile software movement </em>and the <a href="http://www.agilemanifesto.org/"><em>Manifesto
+          of Agile Software Development</em></a>, taught us to <em>embrace
+        change</em>. The <em>Let it Fail</em> philosophy is teaching us to
+      embrace failure.</p>
+    <p style="text-align: justify;">Luckily, we're at a point in time where the
+      stars are aligning just right. Enough real-life experience was gained by
+      'doers' (in the words of <a class="a-link-normal contributorNameID" href="http://www.amazon.com/Nassim-Nicholas-Taleb/e/B000APVZ7W/ref=dp_byline_cont_book_1"
+        data-asin="B000APVZ7W">Nassim
+        Nicholas Taleb</a>), and a lot of concepts and technologies have started
+      to surface and become mature enough, so that with some luck - if put
+      together exactly right - could be the spark that starts a new revolution.</p>
+    <p style="text-align: justify;">So what are these technologies and
+      knowledge?</p>
+    <h2 style="text-align: justify;">Micro-Services</h2>
+    <p style="text-align: justify;">Collective experience has taught us that
+      large, monolithic, state-ful services are hard to manage. So a (new?
+      sounds familiar) software architecture called <a href="http://martinfowler.com/articles/microservices.html">Microservices</a>
+      is taking hold. As <a href="http://martinfowler.com/">Martin Flower</a>
+      and James Lewis put it, "The micro-service architectural style <a href="http://martinfowler.com/articles/microservices.html#footnote-etymology">[1]</a>
+      is an approach to developing a single application as a suite of small
+      services, each running in its own process and communicating with
+      lightweight mechanisms, often an HTTP resource API".</p>
+    <p style="text-align: justify;">Services, and true service oriented
+      architectures, go extremely well with another technology that has recently
+      started to mature - <em>containerization. </em>Docker is the poster
+      child of this technology, and has gained tremendous traction and attention
+      - and rightfully so.</p>
+    <h2><a href="http://docker.com">Docker</a></h2>
+    <p style="text-align: justify;">In one sentence, it's a way to containerize
+      processes, that is much more lightweight (<em>smaller is faster</em>
+      design principle, big-time) than Virtual Machines, but at the cost of less
+      isolation. IT'S NOT A VM, especially not from the security standpoint, but
+      it's a very good fit for Microservices and statelessness. Docker is still
+      young, but there are literally tens of thousands of very smart people
+      around the world that spend significant amounts of time with this
+      technology, and are coming up with clever things to do with it, on daily
+      basis.</p>
+    I previously said that it's much easier to manage small, well defined,
+    stateless services, which brings me to a great example how real world,
+    collective experience has resulted in an exceptionally clear approach to
+    'how things should be done'. This again reminds me of <a class="a-link-normal contributorNameID"
+      href="http://www.amazon.com/Nassim-Nicholas-Taleb/e/B000APVZ7W/ref=dp_byline_cont_book_1"
+      data-asin="B000APVZ7W">Nassim
+      Nicholas Taleb</a>'s take on 'doers' vs. talkers in his book <a href="http://www.amazon.com/gp/product/0812979680/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0812979680&amp;linkCode=as2&amp;tag=wwwmulticloud-20&amp;linkId=DE5ZACLIXLODIUSH">Antifragile:
+      Things That Gain from Disorder (Incerto)</a><img style="border: none !important; margin: 0px !important;"
+      src="http://ir-na.amazon-adsystem.com/e/ir?t=wwwmulticloud-20&amp;l=as2&amp;o=1&amp;a=0812979680"
+      alt=""
+      border="0"
+      height="1"
+      width="1">.
+    The approach below just screams real-world, collective experience (including
+    a lot of failures) of many people:
+    
+    <h2>12 Factor Apps</h2>
+    <p style="text-align: justify;"><a href="https://www.heroku.com/">Heroku</a>
+      (?) a PAAS provider, has released a blueprint of idealized modern-day
+      cloud-enabled applications, called <a href="http://12factor.net/">the
+        12-Factor</a>:</p>
+    <blockquote>
+      <p style="text-align: justify;">The twelve-factor app is a methodology for
+        building software-as-a-service apps that:</p>
+      <ul>
+        <li style="text-align: justify;">Use <strong>declarative</strong>
+          formats for setup automation, to minimize time and cost for new
+          developers joining the project;</li>
+        <li style="text-align: justify;">Have a <strong>clean contract</strong>
+          with the underlying operating system, offering <strong>maximum
+            portability</strong> between execution environments;</li>
+        <li style="text-align: justify;">Are suitable for <strong>deployment</strong>
+          on modern <strong>cloud platforms</strong>, obviating the need for
+          servers and systems administration;</li>
+        <li style="text-align: justify;"><strong>Minimize divergence</strong>
+          between development and production, enabling <strong>continuous
+            deployment</strong> for maximum agility;</li>
+        <li>And can <strong>scale up</strong> without significant changes to
+          tooling, architecture, or development practices.</li>
+      </ul>
+    </blockquote>
+    In the 12-factor list of principles, principle <a href="http://12factor.net/processes">VI.
+      Processes</a> states that you should "Execute the app as one or more
+    stateless processes".
+    <p style="text-align: justify;">State is the root of all evil. That's what
+      my Computer Science professor taught me, when I was struggling with Lisp.
+      Unfortunately, that didn't quite sink at the time.. if(x) --&gt; lambda
+      (x,x) ?! wh..what?!</p>
+    <p style="text-align: justify;">15 years later, I started playing with
+      Docker and clustering, and I realise that life would be a whole lot better
+      if an application (or service) had no state, so that I could stop it form
+      running in one place (Lucy?) and start it on another (Yoda?). Sadly,
+      although this is true in some cases, most applications are not 12-factor
+      by a long shot. State is here, and it's never going away. But luckily -
+      modern, specialized st sateful services have been built with the
+      possibility (and the more modern ones - with the high probability) of
+      failure in mind: Cassandra, MongoDB, ElasticSearch, Redis, clustered file
+      systems (CEPH), etc etc.</p>
+    <p style="text-align: justify;">That allows software architects to design
+      systems where data (state) is held within services that can handle failure
+      (some more easily than others), which allows many of the other services to
+      now be state-free, at least to some degree.</p>
+    <p style="text-align: justify;">BTW: A system that relies on the
+      existence and availability of a server called Lucy, actually has state -
+      the name Lucy is state enough to make your whole system go down, when Lucy
+      takes a nap. It's implicit state, and that's probably one of the worst.</p>
+    A word to the wise, using the same Ice Cream principle: Not everything is
+    12-factor.
+    <h2>Why are you boring us with these obvious points?</h2>
+    More and more companies are moving to the cloud. Moving what? Servers.
+    They're moving servers. Instead of having a small temple at work - let's tear
+    down our own private temple, and instead - make a monthly sacrifice to the
+    Grand temple of Amazon. They have a whole clan of Amazon priests that know
+    how to take care of Servers. And we can still give them names!! Lucy is now
+    in the Sky. Poetic.
+    <p style="text-align: justify;">One day, and that day is coming soon -
+      individual Servers would no longer be important. They will be created,
+      maintained, assigned work, and terminated - by software, composed of
+      Microservices, running on clusters that span multiple 'clouds', and optimized
+      in real-time. When that day comes, productivity will increase,
+      availability will increase, and cost will go down. The Kohanim of Amazon
+      will still have an extremely important role, but the monthly tribute will
+      be much smaller, and spread between a number of Cloud Temples. Using
+      multiple clouds simultaneously will be the norm, applications and services
+      will move from cloud to cloud as if there was no barrier, according
+      to "constraints and policies as specified by the service description".
+      That day will come, sooner than you think. That's what Multicloud is all
+      about.</p>
+    <h2>Servers are nothing. Services are everything</h2>
+    To address everything that practical Computer Science has taught us, a
+    modern, 2015 architecture would try to break the application in to small,
+    ideally stateless micro-services, and place data / state in specialized
+    services that can handle failure effectively and efficiently. Failure is not
+    a question of 'if', it's a question of 'when'. Something needs to govern
+    these clusters of servers and services.
+    <p style="text-align: justify;">PS. When you turn on your light switch, do
+      you care or know where the Electrons that power your lightbulb come from?</p>
+    <p style="text-align: justify;">Servers are the electrons that make your
+      software light bulb shine.</p>
+    <h2 style="text-align: justify;">Interesting reads:</h2>
+    A paper on<a href="http://users.ece.cmu.edu/%7Ekoopman/des_s99/sw_reliability/">
+      Software Reliability </a>by CMU.
+    <a href="http://en.wikipedia.org/wiki/Reliability_engineering">Reliability
+      Engineering</a> from Wikipedia
+  </body>
+</html>
