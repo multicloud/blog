@@ -1,7 +1,7 @@
 # Jekyll configuration
 
-name: My blog
-description: A jekyll theme
+name: Multicloud's Blog
+description: All about Cloud Technology Optimization
 
 # url is currently only used only for the RSS feed in feed.xml
 url: http://www.multicloud.io/blog
@@ -21,7 +21,7 @@ gaaccount: ''
 # Set this to your disqus shortname to enable comments. Note that the 'comments'
 # setting below must also be true. Individual posts can override 'comments' to
 # disable on a post-by-post basis
-disqus: ''
+disqus: 'yaronr'
 comments: true
 
 permalink: /:year/:month/:title
