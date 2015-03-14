@@ -3,7 +3,7 @@ layout: post
 title: Necessity is the mother of invention 
 ---
 
-My previous startup, **WhatsOn**, which created personalized, curated social feeds for media companies, required significant computational resources. Being a bootstrapping entrepreneur, and short on cash - my goal was to make do with whatever I could get for free, or for the lowest possible cost. My background in software architecture and 'can do' attitude has put me on a path towards an architecture that can do just that.
+My previous startup, **WhatsOn**, which created personalized, curated social feeds for media companies, required significant computational resources. Being a bootstrapping entrepreneur, and short on cash - my goal was to "make do" with whatever I could get for free, or for the lowest possible cost. My background in software architecture and 'can do' attitude has put me on a path towards an architecture that can do just that.
 
 But as I worked on my solution, I realized that this is a private case of a much broader issue. When companies migrate to the cloud, they expect that their spending on the cloud would be efficient and effective. The reality of the matter is, that moving to the cloud didn't make IT governance and capital efficiency better, the opposite: Over-spending is the norm, rather than the exception, and the degree of over-spending is significant.
 
@@ -17,6 +17,6 @@ I quickly followed by thrall research, mostly hand-on, in order to learn all the
 
 Then, my next step was to define a functional spec that would address a subset of the market needs, and an architecture that could support it and all the features that are along the path I have chosen.
 
-Long story short: The answer is **Yes**. There's a better way to do Cloud, but it requires a different kind of thinking than the line of thought that was used to bring us to create what we all know today as **The Cloud**.
+To make a long story short: The answer is **Yes**. There's a better way to do Cloud, but it requires a different kind of thinking than the line of thought that was used to bring us to create what we all know today as **The Cloud**.
 
 Join me in this journey towards a better cloud - or **cloud technology optimization**.

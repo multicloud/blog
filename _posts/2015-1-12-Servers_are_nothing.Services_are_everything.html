@@ -37,15 +37,15 @@ title: Servers are nothing. Services are everything
     <p style="text-align: justify;">In time, (useful) software started to appear, and the rest is history. But as everyone soon figured, running important applications which were 
       dependent on single computers was problematic since computers sometimes fail. Hardware vendors were expected to reduce
       hardware faults in any way possible, including crazy things like
-      oven-testing their hardware. But that wasn't enough. It became clear that
-      that preventing individual failure is not the right approach. The next
+      oven-testing their hardware. But that wasn't enough. It became clear that 
+      preventing individual failure is not the right approach. The next
       line of thought was - <em>Can we build something that would <strong>tolerate</strong>
         failure</em>?</p>
     <blockquote>Sh*t happens. If you're lucky - it happens to you at least
       once a day.</blockquote>
     <p style="text-align: justify;">Light-bulb moment (or maybe panic?). Redundancy!! Two power
       supplies! Two UPS systems! Two of everything!!</p>
-    <p style="text-align: justify;">Back in the 1960's, Greg Pfister invents the
+    <p style="text-align: justify;">Back in the 1960's, Greg Pfister invented the
       concept of a Computer Cluster. Originally aimed at addressing cases where
       a single computer could not handle the load, but later, throughout the
       70's and 80's, adapted for high availability, with Digital (may it
@@ -57,7 +57,7 @@ title: Servers are nothing. Services are everything
         href="http://en.wikipedia.org/wiki/David_Patterson_%28scientist%29">David
         Patterson</a>, <a class="mw-redirect" title="Garth A. Gibson" href="http://en.wikipedia.org/wiki/Garth_A._Gibson">Garth
         A. Gibson</a>, and <a title="Randy Katz" href="http://en.wikipedia.org/wiki/Randy_Katz">Randy
-        Katz</a>) present a paper at the SIGMOD conference, titled "<i>A Case
+        Katz</a>) presented a paper at the SIGMOD conference, titled "<i>A Case
         for Redundant Arrays of Inexpensive Disks (RAID)</i>": Let's put a lot
       of cheap hard disks and turn it into a virtual one, that can tolerate N
       failures. And RAID was born. Light and joy filled every living soul.
@@ -69,7 +69,7 @@ title: Servers are nothing. Services are everything
         Rosenblum</a>, Scott Devine, Edward Wang and <a title="Edouard Bugnion"
         href="http://en.wikipedia.org/wiki/Edouard_Bugnion">Edouard
         Bugnion</a>) realized that this is a never ending loop. Hardware is
-      hardware, and as anything physical - it's eventually going to break. And
+      hardware, and as anything physical - it's eventually going to break, and
       fixing a broken server can take time. They start VMWare.</p>
     <p style="text-align: justify;">Lucy is still a piece of (hopefully) cold
       Silicone, surrounded by wires, plastic, gold, other metal, a pinch of
@@ -108,7 +108,7 @@ title: Servers are nothing. Services are everything
       sounds familiar) software architecture called <a href="http://martinfowler.com/articles/microservices.html">Microservices</a>
       is taking hold. As <a href="http://martinfowler.com/">Martin Flower</a>
       and James Lewis put it, "The micro-service architectural style <a href="http://martinfowler.com/articles/microservices.html#footnote-etymology">[1]</a>
-      is an approach to developing a single application as a suite of small
+      is an approach for developing a single application as a suite of small
       services, each running in its own process and communicating with
       lightweight mechanisms, often an HTTP resource API".</p>
     <p style="text-align: justify;">Services, and true service oriented
@@ -167,7 +167,7 @@ title: Servers are nothing. Services are everything
           tooling, architecture, or development practices.</li>
       </ul>
     </blockquote>
-    In the 12-factor list of principles, principle <a href="http://12factor.net/processes">VI.
+    In the 12-factor list of principles, principle <a href="http://12factor.net/processes">VI:
       Processes</a> states that you should "Execute the app as one or more
     stateless processes".
     <p style="text-align: justify;">State is the root of all evil. That's what
@@ -180,7 +180,7 @@ title: Servers are nothing. Services are everything
       running in one place (Lucy?) and start it on another (Yoda?). Sadly,
       although this is true in some cases, most applications are not 12-factor
       by a long shot. State is here, and it's never going away. But luckily -
-      modern, specialized st sateful services have been built with the
+      modern, specialized sate-ful services have been built with the
       possibility (and the more modern ones - with the high probability) of
       failure in mind: Cassandra, MongoDB, ElasticSearch, Redis, clustered file
       systems (CEPH), etc etc.</p>
@@ -194,12 +194,12 @@ title: Servers are nothing. Services are everything
       takes a nap. It's implicit state, and that's probably one of the worst.</p>
 
     <h2>Why are you boring us with these obvious points?</h2>
-    More and more companies are moving to the cloud. Moving what? Servers.
+    More and more companies are moving to the cloud. Moving what? <font color="red"><b>Servers.</b></font>
     They're moving servers. Instead of having a small temple at work - let's tear
     down our own private temple, and instead - make a monthly sacrifice to the
-    Grand temple of Amazon (now 45% of the market). They have a whole clan of Amazon priests that know
+    Grand temple of Amazon (now estimated at about 45% of the market). They have a whole clan of Amazon priests that know
     how to take care of Servers. And we can still give them names!! Lucy is now
-    in the Sky. Poetic.<br>
+    in the Sky. Poetic!!!<br>
     So moving to the cloud changed very little, for most cloud customers: They still rely on servers, only now these servers are usually virtual, and running on someone else's infrastructure.
     <p style="text-align: justify;">One day, and that day is coming soon -
       individual computers would no longer be important. They will be created,
@@ -212,11 +212,11 @@ title: Servers are nothing. Services are everything
       multiple clouds simultaneously will be the norm, applications and services
       will move from cloud to cloud as if there was no barrier, according
       to "constraints and policies as specified by the service description".
-      That day will come, sooner than you think. That's what Multicloud is all
-      about.</p>
+      That day will come, sooner than you think. <font color="blue"><b>That's what Multicloud is all
+      about.</b></font></p>
     <h2>Servers are nothing. Services are everything</h2>
     To address everything that practical Computer Science has taught us, a
-    modern, 2015 architecture would try to break the application in to small,
+    modern, 2015 architecture would try to break the application into small,
     ideally stateless micro-services, and place data / state in specialized
     services that can handle failure effectively and efficiently. Failure is not
     a question of 'if', it's a question of 'when'. Something needs to govern
